@@ -73,25 +73,29 @@ Bharathiyar/
 
 ## GitHub Pages setup
 
-**Recommended (branch + `/docs`):**
+Pages is configured for **branch `main` / root**. The built site files live at the repo root (`index.html`, `assets/`, `data/works.json`, `.nojekyll`) so https://Gopal9797.github.io/Bharathiyar/ loads the React app — not the README.
 
-1. Build and refresh `docs/`:
-   ```bash
-   cd web
-   npm install
-   npm run build
-   # from repo root on Windows PowerShell:
-   Remove-Item -Recurse -Force ..\docs -ErrorAction SilentlyContinue
-   Copy-Item -Recurse dist ..\docs
-   ```
-2. Commit and push `docs/` to `main`.
-3. Repo **Settings → Pages**:
-   - Source: **Deploy from a branch**
-   - Branch: `main`
-   - Folder: **`/docs`**
-4. Visit https://Gopal9797.github.io/Bharathiyar/
+### Publish a new build
 
-**Alternative:** set Pages source to **GitHub Actions** and use `.github/workflows/deploy-pages.yml` (publishes `web/dist` directly).
+```powershell
+cd web
+npm run build
+Copy-Item -Force dist\index.html ..\index.html
+Copy-Item -Force dist\404.html ..\404.html
+Copy-Item -Force dist\favicon.svg ..\favicon.svg
+Copy-Item -Force dist\icons.svg ..\icons.svg
+Copy-Item -Force dist\data\works.json ..\data\works.json
+Copy-Item -Force dist\assets\* ..\assets\
+# optional mirror
+Copy-Item -Recurse -Force dist\* ..\docs\
+New-Item -ItemType File -Force -Path ..\.nojekyll, ..\docs\.nojekyll | Out-Null
+cd ..
+git add index.html 404.html .nojekyll favicon.svg icons.svg assets data/works.json docs
+git commit -m "Update GitHub Pages build"
+git push
+```
+
+Wait 1–2 minutes after push, then hard-refresh the live site.
 
 ---
 
