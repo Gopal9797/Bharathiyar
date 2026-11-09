@@ -1,0 +1,78 @@
+[theme]
+base = "light"
+baseFontSize = 16
+baseFontWeight = 400
+baseRadius = "8px"
+buttonRadius = "8px"
+showWidgetBorder = true
+showSidebarBorder = true
+font = "'Noto Sans Tamil':https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap"
+headingFont = "'Noto Serif Tamil':https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@500;600;700&display=swap"
+headingFontSizes = ["34px", "28px", "22px", "18px", "16px", "14px"]
+headingFontWeights = [600, 600, 600, 600, 500, 500]
+linkUnderline = true
+
+[theme.light]
+primaryColor = "#9A3412"
+backgroundColor = "#FBF6EE"
+secondaryBackgroundColor = "#F3EADF"
+textColor = "#2A2118"
+linkColor = "#9A3412"
+borderColor = "#E4D5C0"
+codeBackgroundColor = "#F3EADF"
+codeTextColor = "#2A2118"
+grayColor = "#78716C"
+orangeColor = "#C2410C"
+redColor = "#9F1239"
+greenColor = "#3F6212"
+blueColor = "#1D4E89"
+yellowColor = "#A16207"
+violetColor = "#6D28D9"
+chartCategoricalColors = ["#9A3412", "#B45309", "#78716C", "#1D4E89"]
+dataframeBorderColor = "#E4D5C0"
+dataframeHeaderBackgroundColor = "#F3EADF"
+dataframeHeaderTextColor = "#2A2118"
+
+[theme.dark]
+primaryColor = "#9A3412"
+backgroundColor = "#1A1410"
+secondaryBackgroundColor = "#2A211B"
+textColor = "#F6EDE2"
+linkColor = "#F0C4A0"
+borderColor = "#3F3228"
+codeBackgroundColor = "#2A211B"
+codeTextColor = "#F6EDE2"
+grayColor = "#A8A29E"
+orangeColor = "#FB923C"
+redColor = "#FB7185"
+greenColor = "#A3E635"
+blueColor = "#7DD3FC"
+yellowColor = "#FACC15"
+violetColor = "#C4B5FD"
+chartCategoricalColors = ["#F0C4A0", "#FB923C", "#A8A29E", "#7DD3FC"]
+dataframeBorderColor = "#3F3228"
+dataframeHeaderBackgroundColor = "#2A211B"
+dataframeHeaderTextColor = "#F6EDE2"
+
+[theme.light.sidebar]
+backgroundColor = "#3B2218"
+secondaryBackgroundColor = "#4A2C20"
+textColor = "#F6EDE2"
+primaryColor = "#E7B089"
+linkColor = "#F3D2B4"
+borderColor = "#5C3A2A"
+codeBackgroundColor = "#4A2C20"
+codeTextColor = "#F6EDE2"
+
+[theme.dark.sidebar]
+backgroundColor = "#120E0C"
+secondaryBackgroundColor = "#1A1410"
+textColor = "#F6EDE2"
+primaryColor = "#E7B089"
+linkColor = "#F0C4A0"
+borderColor = "#3F3228"
+codeBackgroundColor = "#1A1410"
+codeTextColor = "#F6EDE2"
+
+[browser]
+gatherUsageStats = false
